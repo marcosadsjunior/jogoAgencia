@@ -120,22 +120,22 @@ def redraw_game_window():
 
     if main_character_down:
         move_char(main_char_sprites_walk_down[walk_count], main_character_position_x, main_character_position_y)
-        # main_character_down = False
+        main_character_down = False
         main_char_first_pos += 1
 
     elif main_character_up:
         move_char(main_char_sprites_walk_up[walk_count], main_character_position_x, main_character_position_y)
-        # main_character_up = False
+        main_character_up = False
         main_char_first_pos += 1
 
     elif main_character_left:
         move_char(main_char_sprites_walk_left[walk_count], main_character_position_x, main_character_position_y)
-        # main_character_left = False
+        main_character_left = False
         main_char_first_pos += 1
 
     elif main_character_right:
         move_char(main_char_sprites_walk_right[walk_count], main_character_position_x, main_character_position_y)
-        # main_character_right = False
+        main_character_right = False
         main_char_first_pos += 1
 
     else:
@@ -156,10 +156,6 @@ while True:
             quit()
 
     movement_arrows = pygame.key.get_pressed()
-    main_character_up = (movement_arrows == [pygame.K_UP])
-    main_character_right = (movement_arrows == [pygame.K_RIGHT])
-    main_character_left = (movement_arrows == [pygame.K_LEFT])
-    main_character_down = (movement_arrows == [pygame.K_DOWN])
 
     if movement_arrows[pygame.K_DOWN]:
         main_character_position_y += velocity_movement
